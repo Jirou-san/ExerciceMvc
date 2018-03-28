@@ -1,0 +1,18 @@
+﻿@model WebMVCExercice.ViewModels.StudentAttendanceViewModel
+
+@{
+	ViewBag.Title = "StudentAttendanceViewModel";
+}
+
+<h2>Attendance</h2>
+@Html.BeginForm()
+@Html.HiddenFor(m => m.AttendanceId)
+@Html.DropDownListFor(m => m.IdStudent, (List<SelectListItem>)ViewBag.Students, "Etudiant")
+@Html.DropDownListFor(m => m.ClassRoomId, (List<SelectListItem>)ViewBag.Rooms, "Salle")
+
+@Html.LabelFor(m => m.DateAttendance)
+@Html.EditorFor(m => m.DateAttendance)
+
+@Html.LabelFor(m => m.IsPresentAttendance)
+@Html.EditorFor(m => m.IsPresentAttendance)
+

@@ -1,0 +1,75 @@
+﻿@model WebMVCExercice.ViewModels.StudentAttendanceViewModel
+
+@{
+	ViewBag.Title = "StudentAttendanceDetail";
+}
+
+<h2>StudentAttendanceDetail</h2>
+
+<div>
+<h4>StudentAttendanceViewModel</h4>
+<hr/>
+@{ Html.RenderPartial("_StringFormat", model: Model.StudentName);}
+	<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassRoomFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassRoomFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassRoomId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassRoomId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendanceId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttendanceId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdStudent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdStudent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAttendance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAttendance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPresentAttendance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPresentAttendance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

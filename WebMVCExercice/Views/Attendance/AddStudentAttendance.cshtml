@@ -1,0 +1,13 @@
+﻿@model WebMVCExercice.ViewModels.StudentAttendanceViewModel
+
+@{
+	ViewBag.Title = "Attendance";
+}
+
+<h2>Attendance</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.EditorFor(e => e)
+	<input type="submit" value="Create" class="btn btn-default" />
+}
